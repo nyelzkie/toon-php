@@ -105,7 +105,7 @@ echo "Decoded: \n";
 var_dump($decoded);
 
 // =============== 11
-$toonString = "users[2]{id,name}:\n1,Alice\n2,Bob\n3,Extra";
+$toonString = "users[3]{id,name}:\n  1,Alice\n  2,Bob\n  3,Extra";
 $options = new DecodeOptions(strict: true);
 try {
     $decoded = Toon::decode($toonString, $options);
