@@ -3,6 +3,7 @@
   "description": "PHP implementation of the TOON format (similar to JSON but shorter and better)",
   "type": "library",
   "license": "MIT",
+  "homepage": "https://github.com/BaseMax/toon-php",
   "authors": [
     {
       "name": "Seyyed Ali Mohammadiyeh (Max Base)",
@@ -12,9 +13,13 @@
   "require": {
     "php": ">=8.0"
   },
+  "support": {
+    "issues": "https://github.com/BaseMax/toon-php/issues",
+    "source": "https://github.com/BaseMax/toon-php"
+  },
   "autoload": {
     "psr-4": {
-      "Toon\\": "./"
+      "Toon\\": "src/"
     }
   }
 }
