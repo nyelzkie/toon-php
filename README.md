@@ -1,6 +1,6 @@
 # TOON-PHP: PHP Implementation of Token-Oriented Object Notation
 
-**TOON** (Token-Oriented Object Notation) is a compact, human-readable serialization format designed specifically for representing JSON-like data in Large Language Model (LLM) prompts. It preserves the full structure of objects, arrays, and primitives from JSON while optimizing for token efficiency and parseability by AI models. By blending YAML's indentation-based nesting for hierarchical data with CSV-inspired tabular layouts for uniform arrays, TOON strikes a balance between brevity and clarity—making it ideal for feeding structured data to LLMs without the verbosity of full JSON.
+**TOON** (Token-Oriented Object Notation) is a compact, human-readable serialization format designed specifically for representing JSON-like data in Large Language Model (LLM) prompts. It preserves the full structure of objects, arrays, and primitives from JSON while optimizing for token efficiency and parseability by AI models. By blending YAML's indentation-based nesting for hierarchical data with CSV-inspired tabular layouts for uniform arrays, TOON strikes a balance between brevity and clarity making it ideal for feeding structured data to LLMs without the verbosity of full JSON.
 
 This PHP library is a complete, object-oriented port of the original TypeScript implementation ([toon-format/toon](https://github.com/toon-format/toon)). It supports lossless encoding from PHP data structures (arrays, objects, primitives) to TOON strings and decoding back, with advanced features like safe key folding, path expansion, custom delimiters, and strict validation modes.
 
@@ -67,3 +67,4 @@ var_dump(Toon::decode($toonString));
 ```
 
 Copyright 2025, Seyyed Ali Mohammadiyeh (Max Base)
+
